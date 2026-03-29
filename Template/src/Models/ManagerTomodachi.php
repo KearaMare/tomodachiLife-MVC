@@ -17,5 +17,11 @@ class ManagerTomodachi extends Manager {
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_CLASS, 'Tomodachi\Models\Manager');
     }
+
+    public function getHabitant($id){
+        $stmt = $this->bdd->prepare('SELECT * FROM habitants WHERE id = ?');
+        $stmt->execute([$id]);
+        return $stmt->fetchObject('Tomodachi\Models\Manager');
+    }
     
 }

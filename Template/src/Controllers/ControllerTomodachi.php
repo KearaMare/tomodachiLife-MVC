@@ -10,4 +10,10 @@ class ControllerTomodachi extends Controller {
         $habitants = $manager->GetAll();
         require VIEWS . 'immeuble.php';
     }
+
+    public function getHabitant($id) {
+        $manager = new ManagerTomodachi();
+        $habitant = $manager->GetHabitant($id);
+        require VIEWS . 'details.php';
+    }
 }

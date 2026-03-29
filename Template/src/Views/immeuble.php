@@ -1,7 +1,6 @@
-
-<?php
-foreach ($habitants as $habitant) {
-    ?><p> <?php echo $habitant->GetNom() ?></p><?php
-}
-
-?>
+<?php foreach ($habitants as $habitant): ?>
+    <h1><?= $habitant->GetNom() ?></h1>
+    <p><?= $habitant->GetId() ?></p>
+    <p><?= $habitant->GetHumeur() ?></p>
+    <a href="/habitant/<?= $habitant->GetId() ?>"><button>Details</button></a>
+<?php endforeach; ?>
