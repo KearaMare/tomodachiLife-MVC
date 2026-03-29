@@ -3,7 +3,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Template\\": "src/"
+            "Tomodachi\\": "src/"
         }
     },
   "require-dev": {

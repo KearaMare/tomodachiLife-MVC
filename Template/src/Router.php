@@ -1,6 +1,6 @@
 <?php
 namespace Tomodachi;
-use Template\Route;
+use Tomodachi\Route;
 
 //use App\Controllers\UserController;
 /** Class Router **/
