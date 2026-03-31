@@ -1,3 +1,6 @@
+<?php ob_start(); ?>
+
+
 <h1>Modifier l'habitant : <?= $habitant->getNom() ?></h1>
 
 <form action="/habitant/update/<?= $habitant->getId() ?>" method="POST">
@@ -43,3 +46,11 @@
 <hr>
 <a href="/habitant/<?= $habitant->getId() ?>"><button type="button">Annuler</button></a>
 <a href="/"><button type="button">Retour à l'immeuble</button></a>
+
+<?php
+// On nettoie les anciennes données après l'affichage
+unset($_SESSION['old']);
+
+$content = ob_get_clean(); // Capture le contenu du tampon
+require VIEWS . 'layout.php'; // Injecte dans le layout
+?>

@@ -19,7 +19,6 @@
 
     <nav>
         <a href="/">🏠 Immeuble</a>
-        <a href="/nouveau">➕ Ajouter un habitant</a>
     </nav>
 
     <main class="container">
@@ -27,7 +26,7 @@
     </main>
 
     <footer style="text-align: center; margin-top: 20px; color: #888;">
-        <p>&copy; 2026 - Mon Examen Tomodachi</p>
+        <p>&copy; 2026 - Tomodachi</p>
     </footer>
 
 </body>
