@@ -90,4 +90,5 @@ class ManagerTomodachi extends Manager {
         $stmt = $this->bdd->prepare("DELETE FROM habitants WHERE id = ?");
         $stmt->execute([$id]);
     }
+    
 }

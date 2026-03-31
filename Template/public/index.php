@@ -16,6 +16,7 @@ $router->get('/habitant/edit/:id', "ControllerTomodachi@edit");
 // --- ACTIONS (POST) ---
 $router->post('/create', "ControllerTomodachi@store");
 $router->post('/habitant/update/:id', "ControllerTomodachi@update");
+$router->post('/habitant/delete', 'ControllerTomodachi@delete');
 
 // Supprime ou commente l'echo pour l'examen, car il peut bloquer les redirections
 // echo "L'URL reçue est : " . $_SERVER["REQUEST_URI"];

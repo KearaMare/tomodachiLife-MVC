@@ -111,4 +111,17 @@ class ControllerTomodachi extends Controller {
         header("Location: /habitant/" . $id);
         exit();
     }
+
+    public function delete() {
+    $id = $_POST['id'];
+
+    if (!empty($id)) {
+        $this->manager->delete($id);
+        $_SESSION['flash'] = "Habitant supprimé avec succès.";
+    }
+
+    // REMPLACE /habitants PAR /
+    header("Location: /"); 
+    exit();
+}
 }

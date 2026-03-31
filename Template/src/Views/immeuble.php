@@ -9,6 +9,10 @@
     <p><?= $habitant->GetId() ?></p>
     <p><?= $habitant->GetHumeur() ?></p>
     <a href="/habitant/<?= $habitant->GetId() ?>"><button>Details</button></a>
+<form action="/habitant/delete" method="POST">
+    <input type="hidden" name="id" value="<?= $habitant->GetId() ?>">
+    <button type="submit">Supprimer</button>
+</form>
 <?php endforeach; ?>
 
 <?php
